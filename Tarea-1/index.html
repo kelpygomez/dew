@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas de Multiplicar, Sumar y Dividir</title>
+</head>
+<body>
+    <div>
+        <h3>Tabla de multiplicar del 7:</h3>
+        <ul id="tablaMultiplicar7"></ul>
+    </div>
+
+    <div>
+        <h3>Tabla de sumar del 8:</h3>
+        <ul id="tablaSumar8"></ul>
+    </div>
+
+    <div>
+        <h3>Tabla de dividir del 9:</h3>
+        <ul id="tablaDividir9"></ul>
+    </div>
+
+    <div>
+        <h3>Operaciones con Desplazamiento de Bits</h3>
+        <div>
+            <p id="divisionResult"></p>
+        </div>
+        <div>
+            <p id="multiplicationResult"></p>
+        </div>
+        <div>
+            <p id="divisionResult2"></p>
+        </div>
+        <div>
+            <p id="multiplicationResult2"></p>
+        </div>
+    </div>
+
+    <script>
+        const tablaMultiplicar7 = document.getElementById("tablaMultiplicar7");
+        const tablaSumar8 = document.getElementById("tablaSumar8");
+        const tablaDividir9 = document.getElementById("tablaDividir9");
+
+        // Tabla de multiplicar del 7
+        for (let i = 1; i <= 10; i++) {
+            const resultado = 7 * i;
+            const item = document.createElement("li");
+            item.textContent = `7 x ${i} = ${resultado}`;
+            tablaMultiplicar7.appendChild(item);
+        }
+
+        // Tabla de sumar del 8 utilizando while
+        let num = 1;
+        while (num <= 10) {
+            const resultado = 8 + num;
+            const item = document.createElement("li");
+            item.textContent = `8 + ${num} = ${resultado}`;
+            tablaSumar8.appendChild(item);
+            num++;
+        }
+
+        // Tabla de dividir del 9 utilizando do while
+        let divisor = 1;
+        do {
+            const resultado = 9 / divisor;
+            const item = document.createElement("li");
+            item.textContent = `9 / ${divisor} = ${resultado}`;
+            tablaDividir9.appendChild(item);
+            divisor++;
+        } while (divisor <= 10);
+    </script>
+    <script>
+        const divisionResult = 125 >> 3;
+        const multiplicationResult = 40 << 2;
+        const divisionResult2 = 25 >> 1;
+        const multiplicationResult2 = 10 << 4;
+
+        const divisionResultElement = document.getElementById("divisionResult");
+        divisionResultElement.textContent = `125 / 8 = ${divisionResult}`;
+
+        const multiplicationResultElement = document.getElementById("multiplicationResult");
+        multiplicationResultElement.textContent = `40 x 4 = ${multiplicationResult}`;
+
+        const divisionResult2Element = document.getElementById("divisionResult2");
+        divisionResult2Element.textContent = `25 / 2 = ${divisionResult2}`;
+        
+        const multiplicationResult2Element = document.getElementById("multiplicationResult2");
+        multiplicationResult2Element.textContent = `10 x 16 = ${multiplicationResult2}`;
+    </script>
+</body>
+</html>
