@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea DWEC03</title>
+<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+<body>
+    <!--Botón que nos permite abrir la ventana en cualquier momento-->
+    <button onclick="openWindow()">Abrir Ventana</button>
+    <h1>TAREA DWEC03</h1>
+    <hr />
+    <script>
+        //Función para abrir una nueva ventana mostrando distintos datos.
+        function openWindow() {
+            const newWindow = window.open("", "_blank", "width=800,height=600,resizable=no");
+            
+        newWindow.document.write("<h3>Ejemplo de Ventana Nueva</h3>");
+        newWindow.document.write("URL Completa: " + newWindow.location.href + "<br>");
+        newWindow.document.write("Protocolo utilizado: " + newWindow.location.protocol + "<br>");
+        newWindow.document.write("Nombre en código del navegador: " + navigator.appCodeName + "<br>");
+        
+        if (navigator.javaEnabled()) {
+            newWindow.document.write("Java SI disponible en esta ventana.<br>");
+        } else {
+            newWindow.document.write("Java NO disponible en esta ventana.<br>");
+        }
+
+        const iframe = newWindow.document.createElement("iframe");
+        iframe.src = "https://www.google.es";
+        iframe.width = "800";
+        iframe.height = "600";
+        newWindow.document.body.appendChild(iframe);
+    }
+
+        // Función para obtener los datos.
+        function getData() {
+        const fullName = prompt("Introduzca su nombre y apellidos:");
+        const birthDay = prompt("Introduzca DIA de nacimiento:");
+        const birthMonth = prompt("Introduzca MES de nacimiento:");
+        const birthYear = prompt("Introduzca AÑO de nacimiento:");
+        
+        const upperFullName = fullName.toUpperCase();
+        const age = new Date().getFullYear() - birthYear;
+        const birthDate = `${birthDay} del mes ${birthMonth} del año ${birthYear}`;
+
+        const cos180 = Math.cos(180);
+        const values = [34, 67, 23, 75, 35, 19];
+        const maxValue = Math.max(...values);
+
+        const randomNumber = Math.random();
+
+        document.write(`Buenos días ${fullName}<br>`);
+        document.write(`Tu nombre tiene ${fullName.length} caracteres, incluidos espacios.<br>`);
+        document.write(`La primera letra A de tu nombre está en la posición: ${upperFullName.indexOf("A")}<br>`);
+        document.write(`La última letra A de tu nombre está en la posición: ${upperFullName.lastIndexOf("A")}<br>`);
+        document.write(`Tu nombre menos las 3 primeras letras es: ${fullName.slice(3)}<br>`);
+        document.write(`Tu nombre todo en mayúsculas es: ${upperFullName}<br>`);
+        document.write(`Tu edad es: ${age} años.<br>`);
+        document.write(`Naciste un feliz ${birthDate}.<br>`);
+        document.write(`El coseno de 180 es: ${cos180}<br>`);
+        document.write(`El número mayor de (34, 67, 23, 75, 35, 19) es: ${maxValue}<br>`);
+        document.write(`Ejemplo de número al azar: ${randomNumber}<br>`);
+    }
+
+        getData();
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# DEWC02: Uso de JavaScript
+# DEWC01: Uso de JavaScript
 ### Kelpy Gómez Camín | 2 - DAM - DEW
 
 #### Ejercicio 1. Realizar una pequeña aplicación en JavaScript  que muestre lo siguiente
@@ -190,4 +190,4 @@ resultado;
 
 #### - Comentar el código y asegurarse de que esté bien indentado para una mayor claridad y presentación.
 
-Se puede ver el código completo en [este documento](https://github.com/kelpygomez/dew/Tarea-1/index.html).
+Se puede ver el código completo en [este documento](https://github.com/kelpygomez/dew/blob/main/Tarea-1/index.html).
